@@ -9,6 +9,8 @@ const projects = {
     ['assets/videos/soul-summon-play.mp4','assets/images/soul-summon-overview.png','assets/images/soul-summon-deferred.png','assets/videos/soul-topview-play.mp4','assets/images/soul-topview-camera.png'],
     ['assets/images/soul-monster-datatable.png','assets/images/soul-monster-sheet-1.png','assets/images/soul-monster-sheet-2.png','assets/images/soul-monster-sheet-3.png'],
     ['assets/images/soul-ai-tree-melee.png','assets/images/soul-ai-tree-ranged.png'],
+    ['assets/images/soul-state-tree-overview.png','assets/images/soul-state-tree-ai-controller.png','assets/images/soul-state-tree-check-range.png'],
+    ['assets/images/soul-state-tree-breath-task.png','assets/images/soul-state-tree-bombing-task.png','assets/images/soul-state-tree-ultimate-task.png','assets/images/soul-state-tree-groggy-task.png','assets/images/soul-state-tree-check-overheat.png'],
     ['assets/videos/soul-ai-melee-play.mp4','assets/videos/soul-ai-ranged-play.mp4','assets/images/soul-ai-decorator.png','assets/images/soul-ai-task.png','assets/images/soul-ai-attack-call.png']
   ],slides:[
     ['PROJECT OVERVIEW','C++를 중심으로 설계한 소울라이크','공통 BaseCharacter를 만들고 플레이어·일반 몬스터·보스를 자식 클래스로 확장했습니다. 전투의 핵심 로직은 C++로 작성하고, 블루프린트는 에셋과 세부 값 조정에 사용했습니다.',['BaseCharacter → Player / Monster 계층 구조','C++ 80%, Blueprint 20%로 역할 분리','플레이어와 몬스터의 공통 기능을 베이스에 집중']],
@@ -19,10 +21,12 @@ const projects = {
     ['JUST DODGE','시간을 제어하는 저스트 회피 연출','정확한 타이밍의 회피에 대해 글로벌 시간은 0.1배속으로 낮추고, 플레이어만 Custom Time Dilation으로 정상 속도를 유지합니다. FOV와 채도도 함께 제어해 성공 피드백을 강화했습니다.',['Global Time Dilation 0.1배속','플레이어 Custom Time Dilation 유지','카메라 FOV 변경과 흑백 화면 연출','일정 시간 후 원상 복구']],
     ['SUMMON & CAMERA','잔상 흡수·소환과 보스 시점','처치한 몬스터의 잔상을 흡수해 클래스를 저장하고, 이후 소환수로 생성합니다. BeginPlay 이전에 상태를 주입하기 위해 Deferred Spawn을 사용했습니다. 보스 광역 패턴에는 탑뷰 카메라도 연결했습니다.',['상호작용으로 몬스터 잔상 흡수','Deferred Spawn으로 소환수 상태 선주입','탑뷰 전환 시 거리·회전을 매 프레임 보간']],
     ['MONSTER DATA','데이터 테이블 기반 몬스터 구성','일반 몬스터와 보스의 스탯을 스프레드시트로 정리해 Data Table로 임포트했습니다. 개체마다 다른 수치를 코드에 직접 작성하지 않아 밸런스 조정이 쉬운 구조입니다.',['휴머노이드·6발 개틀링·4발 포탑·메카 드래곤','몬스터별 AttackRange·스탯 데이터화','전투 수치와 클래스 로직 분리']],
-    ['BEHAVIOR TREE','근거리·원거리 행동 트리 분리','공격 거리와 패턴이 다른 몬스터를 하나의 트리에 넣지 않고 근거리/원거리 트리로 나눴습니다. 같은 공간에서 조건을 세밀하게 제어할 수 있도록 구조를 분리했습니다.',['근거리 / 원거리 Behavior Tree 분리','사거리 밖에서는 Move To, 조건 충족 시 공격으로 전환','몬스터 특성에 맞는 트리 확장 가능']],
-    ['AI DECISION','Can Attack?에서 전투 실행까지','커스텀 Decorator는 플레이어와의 2D 거리에서 충돌 반경을 보정하고 Data Table의 AttackRange와 비교합니다. AI Task는 판단 결과를 BaseMonster::Attack()에 전달해 판단과 실행을 분리했습니다.',['Can Attack? 커스텀 Decorator','낮은 우선순위 Move To 중단','AI Task는 판단, Monster 클래스는 실제 공격 처리']]
+    ['BEHAVIOR TREE','근거리·원거리 행동 트리 분리','일반 몬스터는 플레이어와의 거리처럼 계속 변하는 전투 상황에 반응해야 하므로 Behavior Tree를 사용했습니다. 공격 방식이 다른 근거리/원거리 몬스터를 각각의 트리로 분리해 추적과 공격 판단을 세밀하게 제어했습니다.',['근거리 / 원거리 Behavior Tree 분리','사거리 밖에서는 Move To, 조건 충족 시 공격으로 전환','반복적으로 평가되는 추적·공격 판단에 사용']],
+    ['AI ARCHITECTURE','Behavior Tree와 State Tree를 함께 사용한 이유','두 AI 시스템을 같은 용도로 중복 사용하지 않고 역할을 나눴습니다. Behavior Tree는 일반 몬스터의 추적·사거리 판단처럼 반복적으로 변하는 조건에 반응하는 데 사용하고, State Tree는 메카 드래곤 보스의 브레스·공중 폭격·궁극기·그로기처럼 명확한 상태와 전환을 가진 패턴 흐름을 관리하는 데 사용했습니다.',['Behavior Tree: 일반 몬스터의 반응형 의사결정','State Tree: 보스 패턴의 상태·페이즈 전환 관리','AIController에 StateTreeAI 컴포넌트를 별도로 구성','행동 판단과 보스 패턴 흐름을 목적에 맞게 분리']],
+    ['STATE TREE','메카 드래곤의 보스 패턴을 상태 단위로 관리','메카 드래곤 전용 State Tree에서 Idle, Breath, Bombing, Ultimate, Cooldown 상태를 분리했습니다. Breath와 Bombing은 조건에 따라 전환되고, Ultimate가 끝나면 Cooldown(그로기)으로 이동한 뒤 다시 Root로 복귀하도록 구성했습니다. 각 상태의 실제 동작은 전용 State Tree Task에서 실행합니다.',['ST_BossMechaDragon에서 보스 상태 흐름 구성','CheckRange: 플레이어와의 거리가 3000 이하인지 검사','CheckOverheat: 몬스터의 IsOverheated 상태 검사','Breath / Bombing / Ultimate / Groggy 전용 Task 분리']],
+    ['AI DECISION','Can Attack?에서 전투 실행까지','Behavior Tree에서는 커스텀 Decorator가 플레이어와의 2D 거리에서 충돌 반경을 보정하고 Data Table의 AttackRange와 비교합니다. AI Task는 판단 결과를 BaseMonster::Attack()에 전달해 판단과 실행을 분리했습니다.',['Can Attack? 커스텀 Decorator','낮은 우선순위 Move To 중단','AI Task는 판단, Monster 클래스는 실제 공격 처리']]
   ]},
-  vr:{title:'VR 방탈출',type:'UNREAL ENGINE 5.4.4 · 1인 제작',image:'assets/images/vr-overview.png',tags:['C++','Blueprint','Oculus VR','UMG','Niagara'],video:'https://youtu.be/UYV-2LxlilY?si=ug2M52ZKUwMmlfyC',media:[
+    vr:{title:'VR 방탈출',type:'UNREAL ENGINE 5.4.4 · 1인 제작',image:'assets/images/vr-overview.png',tags:['C++','Blueprint','Oculus VR','UMG','Niagara'],video:'https://youtu.be/UYV-2LxlilY?si=ug2M52ZKUwMmlfyC',media:[
     ['assets/images/vr-overview.png'],
     ['assets/images/vr-level-layout.png','assets/images/vr-base-actor-a.png','assets/images/vr-base-actor-b.png','assets/images/vr-base-actor-c.png'],
     ['assets/videos/vr-puzzle1-play.mp4','assets/images/vr-puzzle1-scene.jpeg','assets/images/vr-puzzle1-button.png','assets/images/vr-puzzle1-jumpscare.png'],
