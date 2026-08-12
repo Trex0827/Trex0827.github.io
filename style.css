@@ -1,0 +1,868 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+:root{--ink:#111317;--paper:#f4f2ec;--lime:#d8ff32;--line:rgba(17,19,23,.18);--muted:#62645e}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,'Noto Sans KR',sans-serif}.site-header{height:78px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:absolute;z-index:3;inset:0 0 auto;color:#fff}.brand{font-weight:800;letter-spacing:-.08em;font-size:26px;color:inherit;text-decoration:none}.brand span,.eyebrow,.section-kicker,.project-meta,.project-number,.hero-index,footer{font-family:'DM Mono','Noto Sans KR',monospace;letter-spacing:.08em}.brand span{font-size:9px;letter-spacing:.08em;margin-left:10px;font-weight:400}.site-header nav{display:flex;gap:30px}.site-header nav a{color:inherit;text-decoration:none;font:11px 'DM Mono',monospace;letter-spacing:.1em}.hero{height:min(790px,100vh);min-height:610px;background:#15191f;color:#fff;padding:clamp(130px,19vh,180px) 5vw 46px;position:relative;overflow:hidden}.hero:after{content:'';position:absolute;width:70vw;height:70vw;right:-18vw;top:-22vw;border:1px solid rgba(216,255,50,.38);border-radius:50%;box-shadow:0 0 0 8vw rgba(216,255,50,.035),0 0 0 16vw rgba(216,255,50,.018)}.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(90deg,#000,transparent 75%)}.eyebrow,.section-kicker{font-size:11px;color:var(--lime);position:relative;z-index:1}.hero h1{font-size:clamp(70px,12vw,178px);line-height:.85;letter-spacing:-.09em;margin:28px 0 28px;position:relative;z-index:1}.hero h1 span{color:var(--lime)}.hero-copy{font-family:'Noto Sans KR',sans-serif;font-size:clamp(16px,1.6vw,22px);line-height:1.75;position:relative;z-index:1}.button{display:inline-flex;gap:48px;color:var(--ink);background:var(--lime);margin-top:24px;padding:17px 20px;text-decoration:none;font-size:13px;font-weight:700;position:relative;z-index:1}.button span{font-size:18px;line-height:12px}.hero-index{position:absolute;bottom:35px;left:5vw;right:5vw;display:flex;align-items:center;gap:12px;font-size:10px;color:#afb3b6;z-index:1}.hero-index i{height:1px;width:65px;background:var(--lime)}.section{padding:115px 5vw}.about{border-bottom:1px solid var(--line)}.section-kicker{color:#5e634f;margin-bottom:32px}.about-layout{display:grid;grid-template-columns:1.2fr .8fr;gap:8vw}.about h2,.section-head h2,.contact h2{font-size:clamp(40px,5.2vw,78px);letter-spacing:-.07em;line-height:1.05;margin:0}.about h2 em{font-style:normal;color:#738b00}.about-text{font-family:'Noto Sans KR',sans-serif;line-height:1.9;color:#43463f;max-width:530px;padding-top:10px}.profile-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);margin-top:90px}.profile-grid article{min-height:187px;padding:22px 25px 15px 0;border-right:1px solid var(--line)}.profile-grid article+article{padding-left:25px}.profile-grid article:last-child{border:0}.profile-grid span{display:block;font:10px 'DM Mono',monospace;letter-spacing:.1em;color:#696c64;margin-bottom:26px}.profile-grid strong{font-size:16px;display:block}.profile-grid p{font:12px/1.7 'Noto Sans KR',sans-serif;color:var(--muted);margin-top:8px}.projects{background:#e6e4dd}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:44px}.section-head p{font:13px/1.7 'Noto Sans KR',sans-serif;color:var(--muted);margin:0}.project-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}.project-card{border:0;padding:0;text-align:left;position:relative;overflow:hidden;background:#222;min-height:300px;color:#fff;cursor:pointer;grid-column:span 4}.project-card.featured{grid-column:span 8;min-height:410px}.project-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:transform .55s ease;filter:saturate(.8)}.project-card:hover img{transform:scale(1.06)}.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,13,18,.05),rgba(9,13,18,.86))}.project-card>*:not(img):not(.shade){position:absolute;z-index:1}.project-number{top:18px;left:18px;font-size:11px}.project-meta{top:18px;right:18px;font-size:9px;text-align:right}.project-card strong{bottom:39px;left:20px;font-size:clamp(20px,2.2vw,33px);letter-spacing:-.06em}.project-card small{bottom:20px;left:20px;font:11px 'Noto Sans KR',sans-serif;color:#d5d8d0}.contact{padding:105px 5vw;display:flex;justify-content:space-between;gap:50px;background:var(--ink);color:#fff}.contact .eyebrow{margin:0 0 26px}.contact h2{font-size:clamp(34px,4.5vw,67px)}.contact-links{width:min(410px,100%);align-self:end}.contact-links a{color:#fff;text-decoration:none;border-bottom:1px solid #585b5d;padding:18px 0;display:flex;justify-content:space-between;font:15px 'DM Mono',monospace}.contact-links span{color:var(--lime);font-size:22px}footer{background:var(--ink);color:#8d9193;border-top:1px solid #42464a;padding:22px 5vw;font-size:9px}
+dialog{border:0;max-width:920px;width:calc(100% - 32px);padding:0;background:#f6f4ee;color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}dialog::backdrop{background:rgba(8,10,13,.8);backdrop-filter:blur(5px)}.close{position:fixed;right:24px;top:18px;z-index:2;border:0;background:var(--lime);width:42px;height:42px;border-radius:50%;font-size:27px;cursor:pointer}.dialog-hero{height:310px;position:relative;color:#fff;overflow:hidden}.dialog-hero img{width:100%;height:100%;object-fit:cover;filter:brightness(.58)}.dialog-hero .text{position:absolute;left:38px;bottom:33px}.dialog-hero h2{font-size:43px;letter-spacing:-.07em;margin:5px 0}.dialog-hero p{font:11px 'DM Mono',monospace;letter-spacing:.1em;margin:0;color:var(--lime)}.detail-body{padding:44px 38px 55px}.summary{font:17px/1.8 'Noto Sans KR',sans-serif;max-width:730px;margin:0 0 40px}.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:38px;border-top:1px solid var(--line);padding-top:32px}.detail-grid h3{font:11px 'DM Mono',monospace;letter-spacing:.1em;color:#6c7067;margin:0 0 17px}.detail-grid ul{padding:0;margin:0;list-style:none}.detail-grid li{font:14px/1.65 'Noto Sans KR',sans-serif;padding:7px 0;border-bottom:1px solid rgba(17,19,23,.1)}.tags{display:flex;gap:8px;flex-wrap:wrap}.tags span{border:1px solid var(--line);padding:8px 10px;font:10px 'DM Mono',monospace}.video-link{display:inline-block;margin-top:35px;color:var(--ink);font-size:13px;font-weight:700;text-underline-offset:5px}
+@media(max-width:700px){.site-header{padding:0 24px;height:64px}.site-header nav{gap:16px}.site-header nav a{font-size:9px}.brand span{display:none}.hero{padding-left:24px;padding-right:24px}.section{padding:75px 24px}.about-layout,.contact{grid-template-columns:1fr;display:grid}.profile-grid{grid-template-columns:1fr 1fr;margin-top:55px}.profile-grid article:nth-child(2){border-right:0}.profile-grid article:nth-child(3){padding-left:0}.section-head{display:block}.section-head p{margin-top:18px}.project-grid{display:block}.project-card,.project-card.featured{display:block;width:100%;min-height:260px;margin-bottom:14px}.contact{padding:75px 24px}.detail-body{padding:32px 22px}.dialog-hero .text{left:22px}.dialog-hero h2{font-size:34px}.detail-grid{grid-template-columns:1fr;gap:28px}.close{right:14px;top:13px}}
+
+/* Expanded project case-study slider */
+.youtube-link{display:inline-flex;gap:14px;align-items:center;margin-top:12px;color:var(--ink);font:11px 'DM Mono',monospace;letter-spacing:.06em;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:4px}.youtube-link span{font-size:18px}.vr-art{inset:0!important;background:radial-gradient(circle at 70% 25%,#cbff35 0 2%,transparent 2.4%),linear-gradient(135deg,#3b1f65,#1d1e42 60%,#111);display:grid!important;place-items:center;font-size:clamp(80px,14vw,140px);font-weight:800;letter-spacing:-.12em;color:rgba(255,255,255,.18)}dialog{max-width:1020px}.dialog-hero{height:285px}.project-detail{padding:30px 38px 40px}.detail-top{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:25px}.detail-top p{margin:0;font:11px 'DM Mono',monospace;letter-spacing:.08em;color:#666a63}.slider{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.slides{display:flex;transition:transform .45s cubic-bezier(.2,.8,.2,1)}.slide{min-width:100%;padding:34px 0 38px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px}.slide-index{font:11px 'DM Mono',monospace;letter-spacing:.12em;color:#7a7d76}.slide h3{font-size:clamp(28px,3.6vw,47px);line-height:1.1;letter-spacing:-.07em;margin:15px 0}.slide .lead{font:15px/1.85 'Noto Sans KR',sans-serif;margin:0;max-width:490px}.slide-side{padding-top:9px}.slide-side h4{font:10px 'DM Mono',monospace;letter-spacing:.11em;color:#6c7067;margin:0 0 13px}.slide-side ul{padding:0;margin:0;list-style:none}.slide-side li{font:13px/1.65 'Noto Sans KR',sans-serif;padding:8px 0;border-bottom:1px solid rgba(17,19,23,.1)}.slide-media{margin-top:22px;width:100%;height:142px;object-fit:cover;border:1px solid var(--line)}.slide-media.placeholder{display:grid;place-items:center;background:#1a1d23;color:var(--lime);font:20px 'DM Mono',monospace;letter-spacing:.15em}.slider-controls{display:flex;justify-content:space-between;align-items:center;margin-top:20px}.slider-controls button{border:1px solid var(--ink);background:transparent;width:45px;height:40px;font-size:21px;cursor:pointer}.slider-controls button:disabled{opacity:.25;cursor:default}.slider-controls div{display:flex;gap:8px}.slider-count{font:11px 'DM Mono',monospace;letter-spacing:.08em}.slide-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}.slide-tags span{border:1px solid var(--line);padding:8px 10px;font:10px 'DM Mono',monospace}.video-link{margin-top:17px}@media(max-width:700px){.project-detail{padding:24px 22px 30px}.slide{grid-template-columns:1fr;gap:23px;padding:26px 0}.slide-media{height:120px}}
+.media-gallery{display:grid;grid-template-columns:1fr;gap:10px;margin-top:22px}.media-gallery.multi{grid-template-columns:repeat(2,minmax(0,1fr))}.slide-media{margin:0;width:100%;height:170px;object-fit:contain;background:#202229;border:1px solid var(--line);cursor:zoom-in}.media-gallery.multi .slide-media{height:132px}.slide-media.placeholder{display:grid;place-items:center}.media-lightbox{position:fixed;z-index:20;inset:0;background:rgba(0,0,0,.9);display:grid;place-items:center;padding:40px}.media-lightbox[hidden]{display:none}.media-lightbox img{max-width:100%;max-height:100%;object-fit:contain}.media-lightbox button{position:absolute;top:18px;right:24px;border:0;border-radius:50%;width:42px;height:42px;background:var(--lime);font-size:28px;cursor:pointer}@media(max-width:700px){.media-gallery.multi{grid-template-columns:1fr}.media-gallery.multi .slide-media,.slide-media{height:160px}}
+.portfolio-file{padding:90px 5vw;display:flex;justify-content:space-between;align-items:center;gap:50px;background:#d8ff32}.portfolio-file .section-kicker{margin:0 0 24px;color:#394200}.portfolio-file h2{font-size:clamp(34px,4.7vw,66px);letter-spacing:-.07em;line-height:1;margin:0}.portfolio-file p:not(.section-kicker){font:13px/1.8 'Noto Sans KR',sans-serif;max-width:550px;margin:19px 0 0}.canva-column{width:min(465px,100%)}.canva-frame{width:100%;aspect-ratio:16/10;background:#15181d;border:1px solid var(--ink);overflow:hidden}.canva-frame iframe{width:100%;height:100%;border:0}.ppt-link{width:100%;color:var(--ink);border:1px solid var(--ink);padding:18px 21px;text-decoration:none;display:flex;flex-direction:column;gap:15px;margin-top:12px}.ppt-link span{font:11px 'DM Mono',monospace;letter-spacing:.08em}.ppt-link strong{font:16px 'Noto Sans KR',sans-serif;display:flex;justify-content:space-between}.ppt-link strong:after{content:'→';font:22px 'DM Mono',monospace}.ppt-link:hover{background:var(--ink);color:var(--lime)}@media(max-width:700px){.portfolio-file{display:block;padding:70px 24px}.canva-column{margin-top:35px}}
+
+
+/* ===== Integrated overrides ===== */
+/* =========================================================
+   1) ORIGINAL DOCUMENT
+   사용자가 그린 스케치처럼:
+   [상단 제목 영역]
+   [가운데 큰 PPT/Canva]
+   [하단 링크]
+   세로 1열 구조로 변경
+   ========================================================= */
+
+.portfolio-file{
+  display:block;
+  padding:90px 5vw;
+  background:var(--lime);
+}
+
+.portfolio-file-head,
+.portfolio-file .canva-column{
+  width:min(1120px,100%);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.portfolio-file-head{
+  border:4px solid var(--ink);
+  background:var(--paper);
+  padding:28px 32px 30px;
+  margin-bottom:10px;
+}
+
+.portfolio-file .section-kicker{
+  margin:0 0 16px;
+  color:#5e634f;
+}
+
+.portfolio-file h2{
+  margin:0;
+  font-size:clamp(34px,4.8vw,64px);
+  line-height:1;
+  letter-spacing:-.07em;
+}
+
+.portfolio-file p:not(.section-kicker){
+  max-width:720px;
+  margin:16px 0 0;
+  font:13px/1.8 'Noto Sans KR',sans-serif;
+}
+
+.portfolio-file .canva-column{
+  width:min(1120px,100%);
+}
+
+.portfolio-file .canva-frame{
+  width:100%;
+  aspect-ratio:16 / 9;
+  border:4px solid var(--ink);
+  background:#111317;
+  overflow:hidden;
+}
+
+.portfolio-file .canva-frame iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  display:block;
+}
+
+.portfolio-file .ppt-link{
+  width:100%;
+  margin-top:10px;
+  padding:21px 26px;
+  border:4px solid var(--ink);
+  background:var(--paper);
+}
+
+.portfolio-file .ppt-link:hover{
+  background:var(--ink);
+  color:var(--lime);
+}
+
+
+/* =========================================================
+   2) 프로젝트 상세 이미지 확대
+   기존 <dialog id="project-dialog">보다 나중에 showModal() 되므로
+   프로젝트 창을 닫지 않아도 이미지가 그 위에 표시됨.
+   ========================================================= */
+
+#media-lightbox.media-lightbox{
+  width:100vw;
+  height:100vh;
+  max-width:none;
+  max-height:none;
+  margin:0;
+  padding:0;
+  border:0;
+  inset:0;
+  background:rgba(7,9,12,.94);
+  overflow:hidden;
+}
+
+#media-lightbox.media-lightbox:not([open]){
+  display:none;
+}
+
+#media-lightbox.media-lightbox[open]{
+  display:grid;
+  grid-template-columns:90px minmax(0,1fr) 90px;
+  grid-template-rows:1fr;
+  place-items:center;
+}
+
+#media-lightbox::backdrop{
+  background:rgba(7,9,12,.25);
+  backdrop-filter:blur(3px);
+}
+
+#media-lightbox .gallery-stage{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:54px 20px 42px;
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  place-items:center;
+  gap:14px;
+}
+
+#media-lightbox .gallery-stage img{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:calc(100vh - 110px);
+  object-fit:contain;
+  box-shadow:0 22px 70px rgba(0,0,0,.45);
+}
+
+#media-lightbox .gallery-counter{
+  color:#fff;
+  font:11px 'DM Mono',monospace;
+  letter-spacing:.12em;
+  opacity:.82;
+}
+
+#media-lightbox .gallery-close{
+  position:absolute;
+  z-index:4;
+  top:20px;
+  right:24px;
+  width:46px;
+  height:46px;
+  border:0;
+  border-radius:50%;
+  padding:0;
+  background:var(--lime);
+  color:var(--ink);
+  font-size:29px;
+  line-height:1;
+  cursor:pointer;
+}
+
+#media-lightbox .gallery-nav{
+  position:relative;
+  z-index:3;
+  width:54px;
+  height:76px;
+  border:1px solid rgba(255,255,255,.48);
+  border-radius:0;
+  padding:0;
+  background:rgba(0,0,0,.22);
+  color:#fff;
+  font-size:46px;
+  line-height:1;
+  cursor:pointer;
+  transition:background .18s ease,border-color .18s ease,transform .18s ease;
+}
+
+#media-lightbox .gallery-nav:hover{
+  background:var(--lime);
+  border-color:var(--lime);
+  color:var(--ink);
+  transform:scale(1.04);
+}
+
+#media-lightbox .gallery-nav:disabled{
+  opacity:.2;
+  cursor:default;
+  transform:none;
+}
+
+#media-lightbox .gallery-prev{
+  grid-column:1;
+}
+
+#media-lightbox .gallery-stage{
+  grid-column:2;
+}
+
+#media-lightbox .gallery-next{
+  grid-column:3;
+}
+
+
+/* 썸네일이 클릭 가능한 이미지라는 느낌을 조금 더 명확하게 */
+#project-dialog .slide-media[data-full]{
+  cursor:zoom-in;
+}
+
+
+/* 모바일 */
+@media(max-width:700px){
+  .portfolio-file{
+    padding:70px 20px;
+  }
+
+  .portfolio-file-head{
+    padding:22px 20px 24px;
+  }
+
+  .portfolio-file .canva-frame{
+    aspect-ratio:16 / 10;
+  }
+
+  .portfolio-file .ppt-link{
+    padding:18px 20px;
+  }
+
+  #media-lightbox.media-lightbox[open]{
+    grid-template-columns:54px minmax(0,1fr) 54px;
+  }
+
+  #media-lightbox .gallery-stage{
+    padding:68px 6px 34px;
+  }
+
+  #media-lightbox .gallery-stage img{
+    max-height:calc(100vh - 125px);
+  }
+
+  #media-lightbox .gallery-nav{
+    width:42px;
+    height:62px;
+    font-size:36px;
+  }
+
+  #media-lightbox .gallery-close{
+    top:14px;
+    right:14px;
+    width:42px;
+    height:42px;
+  }
+}
+
+
+
+/* =========================================================
+   V3 — Project modal focus / denser detail / side navigation
+   ========================================================= */
+
+html.project-modal-open,
+body.project-modal-open{
+  overflow:hidden !important;
+  overscroll-behavior:none;
+}
+
+#project-dialog{
+  position:relative;
+  width:min(960px,calc(100vw - 44px));
+  max-width:960px;
+  max-height:calc(100vh - 44px);
+  padding:0;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.28);
+}
+
+#project-dialog #dialog-content{
+  max-height:calc(100vh - 44px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-gutter:stable;
+}
+
+/* 히어로와 상세 영역을 조금 압축해 첫 화면에서 내용 밀도를 높임 */
+#project-dialog .dialog-hero{
+  height:230px;
+}
+
+#project-dialog .dialog-hero .text{
+  left:34px;
+  bottom:27px;
+}
+
+#project-dialog .dialog-hero h2{
+  font-size:40px;
+}
+
+#project-dialog .project-detail{
+  padding:24px 36px 25px;
+}
+
+#project-dialog .detail-top{
+  margin-bottom:18px;
+}
+
+#project-dialog .slide{
+  padding:24px 0 26px;
+  gap:40px;
+}
+
+#project-dialog .slide h3{
+  font-size:clamp(27px,3vw,40px);
+  margin:12px 0 13px;
+}
+
+#project-dialog .slide .lead{
+  font-size:14px;
+  line-height:1.72;
+}
+
+#project-dialog .slide-side{
+  padding-top:5px;
+}
+
+#project-dialog .slide-side li{
+  font-size:12px;
+  line-height:1.55;
+  padding:6px 0;
+}
+
+#project-dialog .media-gallery{
+  margin-top:15px;
+  gap:8px;
+}
+
+#project-dialog .slide-media{
+  height:140px;
+}
+
+#project-dialog .media-gallery.multi .slide-media{
+  height:112px;
+}
+
+/* 기존 하단 이동 버튼은 사용하지 않음 */
+#project-dialog .slider-controls{
+  display:none !important;
+}
+
+/* 상세창 좌/우 고정 내비게이션 */
+#project-dialog .project-side-nav{
+  position:absolute;
+  z-index:20;
+  top:50%;
+  transform:translateY(-50%);
+  width:48px;
+  height:104px;
+  margin:0;
+  padding:0;
+  border:1px solid rgba(255,255,255,.28);
+  background:rgba(17,19,23,.62);
+  color:#fff;
+  font:46px/1 Manrope,'Noto Sans KR',sans-serif;
+  cursor:pointer;
+  backdrop-filter:blur(7px);
+  -webkit-backdrop-filter:blur(7px);
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  transition:background .18s ease,color .18s ease,opacity .18s ease,width .18s ease;
+}
+
+#project-dialog .project-prev{
+  left:0;
+  border-left:0;
+  border-radius:0 8px 8px 0;
+}
+
+#project-dialog .project-next{
+  right:0;
+  border-right:0;
+  border-radius:8px 0 0 8px;
+}
+
+#project-dialog .project-side-nav:hover:not(:disabled){
+  width:54px;
+  background:rgba(216,255,50,.94);
+  color:var(--ink);
+}
+
+#project-dialog .project-side-nav:disabled{
+  opacity:0;
+  pointer-events:none;
+}
+
+/* 상세창 안쪽에서만 스크롤됨을 시각적으로 정리 */
+#project-dialog #dialog-content::-webkit-scrollbar{
+  width:9px;
+}
+
+#project-dialog #dialog-content::-webkit-scrollbar-thumb{
+  background:rgba(17,19,23,.28);
+  border:2px solid transparent;
+  background-clip:padding-box;
+  border-radius:999px;
+}
+
+#project-dialog #dialog-content::-webkit-scrollbar-track{
+  background:transparent;
+}
+
+@media(max-width:700px){
+  #project-dialog{
+    width:calc(100vw - 20px);
+    max-height:calc(100vh - 20px);
+  }
+
+  #project-dialog #dialog-content{
+    max-height:calc(100vh - 20px);
+  }
+
+  #project-dialog .dialog-hero{
+    height:205px;
+  }
+
+  #project-dialog .project-detail{
+    padding:20px 22px 22px;
+  }
+
+  #project-dialog .slide{
+    padding:20px 0 22px;
+    gap:18px;
+  }
+
+  #project-dialog .project-side-nav{
+    width:40px;
+    height:76px;
+    font-size:36px;
+    background:rgba(17,19,23,.7);
+  }
+
+  #project-dialog .project-side-nav:hover:not(:disabled){
+    width:44px;
+  }
+}
+
+
+/* =========================================================
+   V5 — 상세 이동 버튼을 내용 영역 밖으로 이동
+   ========================================================= */
+
+@media(min-width:701px){
+  /* 좌우에 버튼이 들어갈 여백을 확보해서 본문/이미지를 가리지 않도록 함 */
+  #project-dialog{
+    width:min(960px,calc(100vw - 130px));
+    max-width:960px;
+    overflow:visible;
+  }
+
+  #project-dialog #dialog-content{
+    background:#f6f4ee;
+  }
+
+  #project-dialog .project-side-nav{
+    top:52%;
+    width:48px;
+    height:94px;
+    background:rgba(17,19,23,.58);
+    border:1px solid rgba(255,255,255,.34);
+    box-shadow:0 10px 28px rgba(0,0,0,.22);
+  }
+
+  #project-dialog .project-prev{
+    left:-58px;
+    border-left:1px solid rgba(255,255,255,.34);
+    border-radius:8px;
+  }
+
+  #project-dialog .project-next{
+    right:-58px;
+    border-right:1px solid rgba(255,255,255,.34);
+    border-radius:8px;
+  }
+
+  #project-dialog .project-side-nav:hover:not(:disabled){
+    width:48px;
+  }
+}
+
+@media(max-width:700px){
+  /* 모바일은 화면 밖으로 뺄 공간이 없으므로 가장자리 안쪽에 작게 유지 */
+  #project-dialog{
+    overflow:hidden;
+  }
+
+  #project-dialog .project-detail{
+    padding-left:54px;
+    padding-right:54px;
+  }
+
+  #project-dialog .project-prev{
+    left:4px;
+  }
+
+  #project-dialog .project-next{
+    right:4px;
+  }
+}
+
+/* =========================================================
+   V9 — Canva 페이지 이동 안내를 PPT 양옆의 여백으로 이동
+   안내는 iframe 위에 겹치지 않으며 PPT 내용을 가리지 않는다.
+   ========================================================= */
+
+/* 제목 박스는 기존 1120px 폭을 유지하고,
+   Canva 영역만 좌우 안내 공간까지 사용할 수 있게 넓힌다. */
+.portfolio-file .canva-column{
+  width:100%;
+  max-width:none;
+}
+
+.canva-stage{
+  width:100%;
+  display:grid;
+  grid-template-columns:minmax(88px,1fr) minmax(0,1120px) minmax(88px,1fr);
+  align-items:center;
+}
+
+.canva-center-stack{
+  grid-column:2;
+  min-width:0;
+}
+
+/* 실제 PPT/Canva 프레임은 기존 크기를 유지 */
+.portfolio-file .canva-frame{
+  width:100%;
+  aspect-ratio:16 / 9;
+  border:4px solid var(--ink);
+  background:#111317;
+  overflow:hidden;
+}
+
+.canva-side-guide{
+  align-self:center;
+  justify-self:center;
+  width:min(132px,100%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  color:var(--ink);
+  text-align:center;
+  user-select:none;
+  pointer-events:none;
+  opacity:.78;
+}
+
+.canva-side-guide-left{
+  grid-column:1;
+}
+
+.canva-side-guide-right{
+  grid-column:3;
+}
+
+.canva-side-arrow{
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  margin-bottom:3px;
+  border:2px solid rgba(17,19,23,.72);
+  border-radius:50%;
+  font:500 39px/1 'DM Mono',monospace;
+  letter-spacing:0;
+}
+
+.canva-side-guide strong{
+  font:700 12px/1.35 'Noto Sans KR',sans-serif;
+}
+
+.canva-side-guide small{
+  display:block;
+  font:500 9px/1.45 'Noto Sans KR',sans-serif;
+  color:rgba(17,19,23,.62);
+  white-space:nowrap;
+}
+
+/* 데스크톱에서는 양옆 안내만 사용 */
+.canva-mobile-hint{
+  display:none;
+}
+
+/* PPT 아래의 원본 링크는 중앙 PPT와 정확히 같은 폭 */
+.portfolio-file .ppt-link{
+  width:100%;
+  margin-top:10px;
+}
+
+/* 화면이 좁아지면 문구를 줄이고 화살표 중심으로 표시 */
+@media(max-width:1050px){
+  .canva-stage{
+    grid-template-columns:72px minmax(0,1fr) 72px;
+  }
+
+  .canva-side-guide{
+    width:64px;
+  }
+
+  .canva-side-guide strong,
+  .canva-side-guide small{
+    display:none;
+  }
+
+  .canva-side-arrow{
+    width:46px;
+    height:46px;
+    font-size:33px;
+  }
+}
+
+/* 모바일에서는 PPT 양옆 공간이 부족하므로
+   프레임 아래에만 간단한 안내를 표시한다. */
+@media(max-width:700px){
+  .portfolio-file .canva-column{
+    margin-top:35px;
+  }
+
+  .canva-stage{
+    display:block;
+  }
+
+  .canva-side-guide{
+    display:none;
+  }
+
+  .portfolio-file .canva-frame{
+    aspect-ratio:16 / 10;
+  }
+
+  .canva-mobile-hint{
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    padding:10px 3px 2px;
+    color:rgba(17,19,23,.72);
+    font:500 9px/1.4 'Noto Sans KR',sans-serif;
+  }
+}
+
+/* =========================================================
+   V10 — Canva 좌우 안내를 실제 페이지 이동 버튼으로 변경
+   ========================================================= */
+.canva-side-guide{
+  border:0;
+  padding:14px 8px;
+  background:transparent;
+  cursor:pointer;
+  pointer-events:auto;
+  appearance:none;
+  transition:opacity .18s ease, transform .18s ease;
+}
+
+.canva-side-guide:hover:not(:disabled),
+.canva-side-guide:focus-visible{
+  opacity:1;
+  transform:translateY(-2px);
+  outline:none;
+}
+
+.canva-side-guide:hover:not(:disabled) .canva-side-arrow,
+.canva-side-guide:focus-visible .canva-side-arrow{
+  background:var(--ink);
+  color:var(--lime);
+  border-color:var(--ink);
+}
+
+.canva-side-guide:disabled{
+  opacity:.24;
+  cursor:default;
+}
+
+.canva-side-guide:disabled .canva-side-arrow{
+  background:transparent;
+}
+
+.canva-mobile-hint button{
+  border:1px solid rgba(17,19,23,.42);
+  background:transparent;
+  color:var(--ink);
+  padding:8px 10px;
+  font:600 10px/1 'Noto Sans KR',sans-serif;
+  cursor:pointer;
+}
+
+.canva-mobile-hint button:disabled{
+  opacity:.28;
+  cursor:default;
+}
+
+.canva-page-indicator{
+  align-self:center;
+  font:10px 'DM Mono',monospace;
+  letter-spacing:.08em;
+  color:rgba(17,19,23,.68);
+}
+
+@media(max-width:700px){
+  .canva-mobile-hint{
+    align-items:center;
+    padding-top:10px;
+  }
+}
+
+
+/* =========================================================
+   V11 — Canva 선로딩 iframe 스택
+   ========================================================= */
+.portfolio-file .canva-frame{
+  position:relative;
+}
+
+.canva-iframe-stack{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#111317;
+}
+
+.canva-page-frame{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  z-index:0;
+}
+
+.canva-page-frame.is-active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  z-index:1;
+}
+
+
+/* =========================================================
+   V13 — Canva direct-click navigation guide
+   ========================================================= */
+.portfolio-file-head .canva-use-guide{
+  margin-top:18px;
+  padding-top:14px;
+  border-top:1px solid rgba(17,19,23,.22);
+  display:flex;
+  align-items:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.portfolio-file-head .canva-use-guide-label{
+  display:inline-flex;
+  align-items:center;
+  min-height:26px;
+  padding:5px 9px;
+  background:var(--ink);
+  color:var(--lime);
+  font:9px 'DM Mono',monospace;
+  letter-spacing:.1em;
+}
+
+.portfolio-file-head .canva-use-guide strong{
+  font:600 12px/1.6 'Noto Sans KR',sans-serif;
+  color:var(--ink);
+}
+
+.portfolio-file-head .canva-use-guide-arrows{
+  margin-left:auto;
+  color:#5e634f;
+  font:10px 'DM Mono',monospace;
+  letter-spacing:.08em;
+  white-space:nowrap;
+}
+
+@media(max-width:700px){
+  .portfolio-file-head .canva-use-guide{
+    align-items:flex-start;
+    gap:9px 10px;
+  }
+
+  .portfolio-file-head .canva-use-guide strong{
+    flex:1 1 210px;
+    font-size:11px;
+  }
+
+  .portfolio-file-head .canva-use-guide-arrows{
+    display:none;
+  }
+}
+
+
+/* =========================================================
+   V15 — Local PPT image viewer
+   ========================================================= */
+.portfolio-page-viewer{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  background:#f4f3ef;
+}
+
+.portfolio-page-viewer > img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+
+/* PPT 이미지의 좌우 끝을 누르면 이전/다음 페이지 이동.
+   완전 투명한 클릭 영역이라 PPT 내용을 시각적으로 가리지 않는다. */
+.ppt-click-zone{
+  position:absolute;
+  z-index:2;
+  top:0;
+  bottom:0;
+  width:18%;
+  padding:0;
+  border:0;
+  background:transparent;
+  cursor:pointer;
+}
+
+.ppt-click-zone-left{left:0;cursor:w-resize}
+.ppt-click-zone-right{right:0;cursor:e-resize}
+.ppt-click-zone:disabled{cursor:default;pointer-events:none}
+
+.video-link-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:17px;
+}
+
+.video-link-group .video-link{
+  margin-top:0;
+  padding:10px 13px;
+  border:1px solid var(--ink);
+  text-decoration:none;
+  transition:background .16s ease,color .16s ease;
+}
+
+.video-link-group .video-link:hover{
+  background:var(--ink);
+  color:var(--lime);
+}
