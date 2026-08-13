@@ -42,8 +42,10 @@ const projects = {
     ['PUZZLE 04','UMG 키패드로 비밀번호 입력','키패드 가까이에서 A 버튼을 누르면 UMG 키패드가 열리고, 트리거 버튼으로 비밀번호를 입력합니다. VR 조작과 UI를 연결한 마지막 문제입니다.',['근접 트리거로 키패드 열기','UMG 기반 숫자 입력 UI','트리거 버튼 입력 처리']]
   ]},
   network:{title:'네트워크 미니 프로젝트',type:'UNREAL ENGINE 5.4 · 3인 제작',image:'assets/images/network-overview.png',tags:['Blueprint','Networking','Server RPC','Client RPC','GameState','PlayerController'],video:'',videoLinks:[
-    {label:'P2 게임 화면',url:'https://youtu.be/2cwlQuqCa-A'},
-    {label:'P1 게임 화면',url:'https://youtu.be/ml2ENxkPXpk'}
+    {label:'P1 게임 화면 · 1판',url:'https://youtu.be/ml2ENxkPXpk'},
+    {label:'P2 게임 화면 · 1판',url:'https://youtu.be/2cwlQuqCa-A'},
+    {label:'P1 게임 화면 · 2판',url:'https://youtu.be/OKy5mBx-MNw'},
+    {label:'P2 게임 화면 · 2판',url:'https://youtu.be/cjjLNM1oInQ'}
   ],media:[
     ['assets/images/network-overview.png'],
     ['assets/images/network-gamestate-register-team.png','assets/images/network-gamestate-start-battle-1.png','assets/images/network-gamestate-start-battle-2.png'],
@@ -59,7 +61,7 @@ const projects = {
     ['SERVER SKILL','클라이언트 입력을 서버에서 스킬 실행으로 변환','스킬 사용 요청은 Server_ExecuteSkill 이벤트로 서버에 전달합니다. 서버는 Target Enemy, Skill ID, Damage Ratio, Hit Count 같은 실행 데이터를 받은 뒤 스킬 타입에 따라 Melee·Ranged·AOE·Ult 액션으로 분기해 캐릭터 전투 함수를 호출합니다.',['Server_ExecuteSkill: Executes On Server','Target Enemy / Skill ID / Damage Ratio / Hit Count 전달','Melee · Ranged · AOE · Ult 액션으로 실행 경로 분리']],
     ['SERVER POSITION','서버에서 전투 슬롯 위치를 확정','Set Character Location Server에서 플레이어 구분과 Slot Index를 이용해 P1/P2 위치 태그를 만들고, 해당 태그의 액터를 찾아 전투 위치를 계산합니다. 캐릭터 캡슐의 Half Height를 Z 위치에 보정한 뒤 서버에서 Location과 Rotation을 확정합니다.',['P1 / P2와 Slot Index로 전투 위치 태그 구성','Get All Actors with Tag로 슬롯 액터 탐색','Capsule Half Height를 보정한 뒤 Set Actor Location And Rotation']],
     ['ACTION QUEUE & UI','카드 선택을 액션 큐로 만들고 UI까지 갱신','선택된 카드 정보는 Action Queue와 Current Action Index를 사용해 순서대로 처리합니다. S_CardData에서 스킬 타입·대미지 비율·히트 수·타깃 정보를 꺼내 다음 액션으로 넘기고, 사용한 카드 배열을 교체·제거한 뒤 Battle UI와 카드 버튼 상태를 갱신하도록 구성했습니다.',['Action Queue + Current Action Index로 실행 순서 관리','S_CardData의 전투 정보를 다음 액션에 전달','Hand Cards 배열 갱신 후 WBP Battle Main UI 업데이트']],
-    ['PLAY VIDEO','P1 · P2 실제 네트워크 플레이 화면','두 플레이어 화면을 각각 확인할 수 있도록 실제 플레이 영상을 분리해 첨부했습니다. 동일한 전투에서 각 클라이언트가 보는 화면과 턴 진행 결과를 비교해 볼 수 있습니다.',['P1 게임 화면: 플레이어 1 클라이언트 시점','P2 게임 화면: 플레이어 2 클라이언트 시점','아래 버튼을 눌러 YouTube 플레이 영상을 확인']]
+    ['PLAY VIDEO','P1 · P2 실제 네트워크 플레이 화면','두 플레이어가 같은 전투를 진행하는 화면을 1판과 2판으로 나누어 첨부했습니다. 각 판에서 P1·P2 클라이언트의 화면을 함께 확인할 수 있어 턴 진행, 카드 사용, 스킬 실행 결과가 양쪽 화면에서 어떻게 동기화되는지 비교할 수 있습니다.',['1판: P1 / P2 클라이언트 화면 비교','2판: P1 / P2 클라이언트 화면 비교','총 4개의 YouTube 플레이 영상으로 네트워크 동기화 결과 확인']]
   ]},
   rpg:{title:'언실드 RPG',type:'UNREAL ENGINE 5.4.4 · 3인 제작 · 4주',image:'assets/images/rpg-overview.png',tags:['Blueprint','Behavior Tree','DataTable','Niagara','SVN','Notion'],video:'https://youtu.be/eZbv3sPX9Xo?si=Lp---S_0J7X1L-Tb',media:[
     ['assets/images/rpg-overview.png','assets/images/rpg-monsters.png','assets/images/rpg-bosses.png'],
