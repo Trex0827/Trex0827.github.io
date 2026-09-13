@@ -866,3 +866,16 @@ body.project-modal-open{
   background:var(--ink);
   color:var(--lime);
 }
+
+/* Team projects first, then 3 + 2 personal projects. */
+@media(min-width:701px){.project-card.featured{grid-column:span 6;min-height:410px}.project-card[data-project="monkey"]{grid-column:1 / span 4}.project-card[data-project="draw"]{grid-column:5 / span 4}}
+.project-card[data-project="arcana"] img{object-position:center top}
+#project-dialog[data-project="arcana"] .dialog-hero img{object-position:center 30%}
+@media(max-width:700px){#project-dialog[data-project="arcana"] .slider-count{white-space:nowrap;flex-shrink:0}}
+.project-card[data-project="arcana"]{background:#29232b}.project-card[data-project="arcana"] img{object-fit:cover;object-position:center top}
+
+/* Ordered implementation images for the Arcana case study. */
+.arcana-media-item{margin:0;min-width:0}.arcana-media-item figcaption{font:10px/1.6 sans-serif;color:#62645e;margin:5px 0 9px}
+#project-dialog[data-project="arcana"] .slides{transition:none}
+#project-dialog[data-project="arcana"] .slide{min-width:0;width:100%}
+#project-dialog[data-project="arcana"] .slide h3,#project-dialog[data-project="arcana"] .slide .lead,#project-dialog[data-project="arcana"] .slide-side li{word-break:keep-all;overflow-wrap:break-word}
