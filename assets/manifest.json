@@ -233,5 +233,30 @@
     "vr-puzzle2-play.mp4",
     "vr-puzzle3-play.mp4",
     "vr-puzzle4-play.mp4"
+  ],
+  "animations": [
+    "draw-card-play.gif",
+    "draw-field-play.gif",
+    "draw-hover-play.gif",
+    "monkey-destroy-play.gif",
+    "monkey-gameplay-play.gif",
+    "monkey-pickup-play.gif",
+    "rpg-airbreath-play.gif",
+    "rpg-hit-play.gif",
+    "rpg-regen-play.gif",
+    "rpg-superarmor-play.gif",
+    "rpg-tornado-play.gif",
+    "soul-ai-melee-play.gif",
+    "soul-ai-ranged-play.gif",
+    "soul-combo-play.gif",
+    "soul-dodge-play.gif",
+    "soul-justdodge-play.gif",
+    "soul-lockon-play.gif",
+    "soul-summon-play.gif",
+    "soul-topview-play.gif",
+    "vr-puzzle1-play.gif",
+    "vr-puzzle2-play.gif",
+    "vr-puzzle3-play.gif",
+    "vr-puzzle4-play.gif"
   ]
 }

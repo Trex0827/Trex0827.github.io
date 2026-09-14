@@ -113,14 +113,15 @@
     <button class="project-side-nav project-next" type="button" aria-label="다음 상세 내용">›</button>
     <div id="dialog-content"></div>
   </dialog>
-  <dialog id="media-lightbox" class="media-lightbox" aria-modal="true" aria-label="이미지 크게 보기">
-    <button type="button" class="gallery-close" aria-label="이미지 닫기">×</button>
-    <button type="button" class="gallery-nav gallery-prev" aria-label="이전 이미지">‹</button>
+  <dialog id="media-lightbox" class="media-lightbox" aria-modal="true" aria-label="이미지와 영상 크게 보기">
+    <button type="button" class="gallery-close" aria-label="확대 보기 닫기">×</button>
+    <button type="button" class="gallery-nav gallery-prev" aria-label="이전 자료">‹</button>
     <div class="gallery-stage">
-      <img src="" alt="확대 이미지">
+      <img alt="확대 이미지" hidden>
+      <video muted autoplay loop playsinline controls preload="metadata" hidden></video>
       <div class="gallery-counter">1 / 1</div>
     </div>
-    <button type="button" class="gallery-nav gallery-next" aria-label="다음 이미지">›</button>
+    <button type="button" class="gallery-nav gallery-next" aria-label="다음 자료">›</button>
   </dialog>
   <script src="script.js"></script>
 </body>
