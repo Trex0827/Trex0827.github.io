@@ -14,7 +14,7 @@ const projects = {
     "Discord",
     "Notion"
   ],
-  "video": "",
+  "video": "https://youtu.be/BLxJ3-kQJmA",
   "media": [
     [
       "assets/arcana/main-menu.png",
@@ -676,6 +676,20 @@ function render() {
         <h2 id="dialog-title">${project.title}</h2>
       </div>
     </div>
+    ${activeProject === 'arcana' ? `
+    <section class="arcana-gameplay-video" aria-label="아르카나 게임 플레이 영상">
+      <div class="arcana-gameplay-heading">
+        <div><span>PROJECT ARCANA / GAMEPLAY</span><strong>아르카나 플레이 영상</strong></div>
+        <a href="${project.video}" target="_blank" rel="noopener noreferrer">▶ YOUTUBE에서 보기 ↗</a>
+      </div>
+      <div class="arcana-gameplay-frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/BLxJ3-kQJmA?rel=0&modestbranding=1"
+          title="아르카나 플레이 영상" loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>` : ''}
     <div class="project-detail">
       <div class="detail-top">
         <p>CASE STUDY · 좌우 버튼으로 구현 내용을 넘겨보세요</p>
